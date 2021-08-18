@@ -1,8 +1,4 @@
 
-import pulumi
-import pulumi_aws as aws
+from getaccesskey import create_access_key
 
-user = aws.iam.User("test-user")
-
-access_key = aws.iam.AccessKey("access-key",
-                               user=user.name)
+access_key = create_access_key()
